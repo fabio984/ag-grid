@@ -6,12 +6,13 @@
 
 <script lang="ts">
 import HelloWorld from "@/views/ag-grid-table.vue";
-export default {
+import {defineComponent} from "vue";
+export default defineComponent({
   name: "app",
   components: {
     HelloWorld
   }
-}
+})
 
 </script>
 
