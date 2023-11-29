@@ -1,49 +1,92 @@
 <template>
-  <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>
-      You’ve successfully created a project with
-      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>. What's next?
-    </h3>
+  <div class="ag-grid-main-component">
+    <!--    <h1 class="green">{{ msg }}</h1>-->
+    <!--    <h3>-->
+    <!--      You’ve successfully created a project with-->
+    <!--      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +-->
+    <!--      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>. What's next?-->
+    <!--    </h3>-->
+    <!-- The AG Grid component -->
+    <ag-grid-vue
+      style="height: 500px"
+      class="ag-theme-quartz"
+      :rowData="rowData"
+      :columnDefs="colDefs"
+    >
+    </ag-grid-vue>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
+import 'ag-grid-community/styles/ag-grid.css' // Core CSS
+import 'ag-grid-community/styles/ag-theme-quartz.css' // Theme
+import { AgGridVue } from 'ag-grid-vue3' // Vue Grid Logic
 
 export default defineComponent({
   name: 'ag-grid-table',
+  components: {
+    AgGridVue
+  },
   props: {
     msg: {
       type: String,
       default: 'default value'
     }
+  },
+  setup() {
+    // Row Data: The data to be displayed.
+    const rowData = ref([
+      {
+        mission: 'Voyager',
+        company: 'NASA',
+        location: 'Cape Canaveral',
+        date: '1977-09-05',
+        rocket: 'Titan-Centaur ',
+        price: 86580000,
+        successful: true
+      },
+      {
+        mission: 'Apollo 13',
+        company: 'NASA',
+        location: 'Kennedy Space Center',
+        date: '1970-04-11',
+        rocket: 'Saturn V',
+        price: 3750000,
+        successful: false
+      },
+      {
+        mission: 'Falcon 9',
+        company: 'SpaceX',
+        location: 'Cape Canaveral',
+        date: '2015-12-22',
+        rocket: 'Falcon 9',
+        price: 9750000,
+        successful: true
+      }
+    ])
+
+    // Column Definitions: Defines & controls grid columns.
+    const colDefs = ref([
+      { field: 'mission' },
+      { field: 'company' },
+      { field: 'location' },
+      { field: 'date' },
+      { field: 'price' },
+      { field: 'successful' },
+      { field: 'rocket' }
+    ])
+
+    return {
+      rowData,
+      colDefs
+    }
   }
 })
 </script>
 
-<style scoped>
-h1 {
-  font-weight: 500;
-  font-size: 2.6rem;
-  position: relative;
-  top: -10px;
-}
-
-h3 {
-  font-size: 1.2rem;
-}
-
-.greetings h1,
-.greetings h3 {
-  text-align: center;
-}
-
-@media (min-width: 1024px) {
-  .greetings h1,
-  .greetings h3 {
-    text-align: left;
-  }
+<style scoped lang="scss">
+.ag-grid-main-component {
+  border: 2px solid blue;
 }
 </style>

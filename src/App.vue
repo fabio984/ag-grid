@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="app-wrapper">
     <HelloWorld :msg="msg" />
   </div>
 </template>
@@ -21,4 +21,8 @@ export default defineComponent({
 })
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.app-wrapper {
+  border: 1px solid red;
+}
+</style>
