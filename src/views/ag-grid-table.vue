@@ -9,10 +9,18 @@
   </div>
 </template>
 
-<script setup lang="ts">
-defineProps<{
-  msg: string
-}>()
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  name: 'ag-grid-table',
+  props: {
+    msg: {
+      type: String,
+      default: 'default value'
+    }
+  }
+})
 </script>
 
 <style scoped>
