@@ -1,14 +1,11 @@
 <template>
-  <div class="ag-grid-main-component">
-    <!--    <h1 class="green">{{ msg }}</h1>-->
-    <ag-grid-vue
-      style="height: 500px"
-      class="ag-theme-quartz"
-      :rowData="rowData"
-      :columnDefs="colDefs"
-    >
-    </ag-grid-vue>
-  </div>
+  <ag-grid-vue
+    style="height: 500px"
+    class="ag-theme-quartz"
+    :rowData="rowData"
+    :columnDefs="colDefs"
+  >
+  </ag-grid-vue>
 </template>
 
 <script lang="ts">
@@ -43,9 +40,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style scoped lang="scss">
-.ag-grid-main-component {
-  // border: 2px solid blue;
-}
-</style>

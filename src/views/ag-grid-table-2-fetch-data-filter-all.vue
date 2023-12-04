@@ -1,14 +1,12 @@
 <template>
-  <div class="ag-grid-main-component">
-    <ag-grid-vue
-      style="height: 500px"
-      :class="themeClass"
-      :columnDefs="colDefs"
-      :rowData="rowData"
-      :defaultColDef="defaultColDef"
-    >
-    </ag-grid-vue>
-  </div>
+  <ag-grid-vue
+    style="height: 500px"
+    :class="themeClass"
+    :columnDefs="colDefs"
+    :rowData="rowData"
+    :defaultColDef="defaultColDef"
+  >
+  </ag-grid-vue>
 </template>
 
 <script lang="ts">
@@ -28,6 +26,7 @@ export default defineComponent({
       default: 'default value',
     },
   },
+
   setup() {
     const defaultColDef = ref({
       filter: true,
@@ -65,9 +64,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style scoped lang="scss">
-.ag-grid-main-component {
-  // border: 2px solid blue;
-}
-</style>

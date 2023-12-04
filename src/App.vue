@@ -1,30 +1,23 @@
 <template>
   <header>
-    <div class="app-wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/first-table">Missions (local)</RouterLink>
-        <RouterLink to="/second-table-fetch-data">Missions (server)</RouterLink>
-        <RouterLink to="/second-table-fetch-data-filter-all"
-          >Missions (server)+filter all</RouterLink
-        >
-        <RouterLink to="/fetch-and-pagination">Missions (server)+pagination</RouterLink>
-      </nav>
-      <!-- <AgGridTable :msg="msg" /> -->
-    </div>
+    <nav>
+      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/first-table">Missions (local)</RouterLink>
+      <RouterLink to="/second-table-fetch-data">Missions (server)</RouterLink>
+      <RouterLink to="/second-table-fetch-data-filter-all">Missions (server)+filter all</RouterLink>
+      <RouterLink to="/fetch-and-pagination">Missions (server)+pagination</RouterLink>
+    </nav>
   </header>
-
   <RouterView />
 </template>
 
 <script lang="ts">
 export default {
   name: 'app',
-  components: {
-    // AgGridTable,
-  },
+
   setup() {
     const msg = 'Ag Grid Machine';
+
     return {
       msg,
     };
@@ -33,10 +26,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.app-wrapper {
-  // border: 1px solid red;
-}
-
 nav {
   width: 100%;
   font-size: 12px;
