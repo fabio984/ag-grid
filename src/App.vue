@@ -5,6 +5,10 @@
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/first-table">Missions (local)</RouterLink>
         <RouterLink to="/second-table-fetch-data">Missions (server)</RouterLink>
+        <RouterLink to="/second-table-fetch-data-filter-all"
+          >Missions (server)+filter all</RouterLink
+        >
+        <RouterLink to="/fetch-and-pagination">Missions (server)+pagination</RouterLink>
       </nav>
       <!-- <AgGridTable :msg="msg" /> -->
     </div>

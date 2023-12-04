@@ -1,6 +1,12 @@
 <template>
   <div class="ag-grid-main-component">
-    <ag-grid-vue style="height: 500px" :class="themeClass" :columnDefs="colDefs" :rowData="rowData">
+    <ag-grid-vue
+      style="height: 500px"
+      :class="themeClass"
+      :columnDefs="colDefs"
+      :rowData="rowData"
+      :pagination="true"
+    >
     </ag-grid-vue>
   </div>
 </template>
@@ -26,7 +32,7 @@ export default defineComponent({
     const rowData = ref([]);
 
     const colDefs = ref([
-      { field: 'mission', filter: true },
+      { field: 'mission' },
       { field: 'company' },
       { field: 'location' },
       { field: 'date' },

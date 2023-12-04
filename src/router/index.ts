@@ -19,6 +19,16 @@ const router = createRouter({
       name: 'second-table',
       component: () => import('../views/ag-grid-table-2-fetch-data.vue'),
     },
+    {
+      path: '/second-table-fetch-data-filter-all',
+      name: 'second-table-with-filter-all',
+      component: () => import('../views/ag-grid-table-2-fetch-data-filter-all.vue'),
+    },
+    {
+      path: '/fetch-and-pagination',
+      name: 'fetch-and-pagination',
+      component: () => import('../views/ag-grid-table-2-fetch-data-pagination.vue'),
+    },
     // {
     //   path: '/about',
     //   name: 'about',
