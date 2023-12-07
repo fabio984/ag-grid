@@ -12,6 +12,9 @@ const router = createRouter({
     {
       path: '/first-table',
       name: 'first-table',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
       component: () => import('../views/ag-grid-table-1.vue'),
     },
     {
@@ -29,14 +32,16 @@ const router = createRouter({
       name: 'fetch-and-pagination',
       component: () => import('../views/ag-grid-table-2-fetch-data-pagination.vue'),
     },
-    // {
-    //   path: '/about',
-    //   name: 'about',
-    //   // route level code-splitting
-    //   // this generates a separate chunk (About.[hash].js) for this route
-    //   // which is lazy-loaded when the route is visited.
-    //   component: () => import('../views/AboutView.vue'),
-    // },
+    {
+      path: '/fetch-and-format-cells',
+      name: 'fech-and-format-cells',
+      component: () => import('../views/ag-grid-table-2-fetch-data-format-cells.vue'),
+    },
+    {
+      path: '/fetch-with-cellRenderer-company-logo',
+      name: 'fetch-with-cellRenderer-company-logo',
+      component: () => import('../views/ag-grid-table-cell-renderer.vue'),
+    },
   ],
 });
 

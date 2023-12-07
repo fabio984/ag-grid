@@ -6,6 +6,10 @@
       <RouterLink to="/second-table-fetch-data">Missions (server)</RouterLink>
       <RouterLink to="/second-table-fetch-data-filter-all">Missions (server)+filter all</RouterLink>
       <RouterLink to="/fetch-and-pagination">Missions (server)+pagination</RouterLink>
+      <RouterLink to="/fetch-and-format-cells">Missions (server)+format cells</RouterLink>
+      <RouterLink to="/fetch-with-cellRenderer-company-logo"
+        >Missions (server)+cell renderer</RouterLink
+      >
     </nav>
   </header>
   <RouterView />
@@ -15,13 +19,7 @@
 export default {
   name: 'app',
 
-  setup() {
-    const msg = 'Ag Grid Machine';
-
-    return {
-      msg,
-    };
-  },
+  setup() {},
 };
 </script>
 
