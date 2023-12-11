@@ -10,6 +10,9 @@
       <RouterLink to="/fetch-with-cellRenderer-company-logo"
         >Missions (server)+cell renderer</RouterLink
       >
+      <RouterLink to="/fetch-and-handle-grid-events"
+        >Missions (server)+handle grid events</RouterLink
+      >
     </nav>
   </header>
   <RouterView />

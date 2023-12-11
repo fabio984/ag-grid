@@ -42,6 +42,11 @@ const router = createRouter({
       name: 'fetch-with-cellRenderer-company-logo',
       component: () => import('../views/ag-grid-table-cell-renderer.vue'),
     },
+    {
+      path: '/fetch-and-handle-grid-events',
+      name: 'fetch-and-handle-grid-events',
+      component: () => import('../views/ag-grid-table-handle-grid-events.vue'),
+    },
   ],
 });
 
