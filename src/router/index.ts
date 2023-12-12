@@ -47,6 +47,11 @@ const router = createRouter({
       name: 'fetch-and-handle-grid-events',
       component: () => import('../views/ag-grid-table-handle-grid-events.vue'),
     },
+    {
+      path: '/fetch-and-handle-checkbox',
+      name: 'fetch-and-handle-checkbox',
+      component: () => import('../views/ag-grid-table-checkbox.vue'),
+    },
   ],
 });
 

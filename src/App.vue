@@ -13,6 +13,7 @@
       <RouterLink to="/fetch-and-handle-grid-events"
         >Missions (server)+handle grid events</RouterLink
       >
+      <RouterLink to="/fetch-and-handle-checkbox">Missions (server)+handle checkbox</RouterLink>
     </nav>
   </header>
   <RouterView />
