@@ -5,6 +5,7 @@
     :columnDefs="colDefs"
     :rowData="rowData"
     rowSelection="multiple"
+    :onSelectionChanged="onSelectionChanged"
   >
   </ag-grid-vue>
 </template>
@@ -55,10 +56,15 @@ export default defineComponent({
       return response.json();
     };
 
+    const onSelectionChanged = (event) => {
+      console.log(event.api.getSelectedRows());
+    };
+
     return {
       rowData,
       colDefs,
       themeClass: 'ag-theme-quartz',
+      onSelectionChanged,
     };
   },
 });
