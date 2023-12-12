@@ -52,6 +52,11 @@ const router = createRouter({
       name: 'fetch-and-handle-checkbox',
       component: () => import('../views/ag-grid-table-checkbox.vue'),
     },
+    {
+      path: '/fetch-and-format-date',
+      name: '/fetch-and-format-date',
+      component: () => import('../views/ag-grid-table-fetch-and-format-date.vue'),
+    },
   ],
 });
 

@@ -14,6 +14,7 @@
         >Missions (server)+handle grid events</RouterLink
       >
       <RouterLink to="/fetch-and-handle-checkbox">Missions (server)+handle checkbox</RouterLink>
+      <RouterLink to="/fetch-and-format-date">Missions (server) format date</RouterLink>
     </nav>
   </header>
   <RouterView />
