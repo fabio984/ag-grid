@@ -57,6 +57,11 @@ const router = createRouter({
       name: '/fetch-and-format-date',
       component: () => import('../views/ag-grid-table-fetch-and-format-date.vue'),
     },
+    {
+      path: '/fetch-and-ticks-and-crosses-successfull',
+      name: '/fetch-and-ticks-and-crosses-successfull',
+      component: () => import('../views/ag-grid-table-fetch-and-crosses-ticks-successfull.vue'),
+    },
   ],
 });
 

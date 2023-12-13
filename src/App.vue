@@ -15,6 +15,9 @@
       >
       <RouterLink to="/fetch-and-handle-checkbox">Missions (server)+handle checkbox</RouterLink>
       <RouterLink to="/fetch-and-format-date">Missions (server) format date</RouterLink>
+      <RouterLink to="/fetch-and-ticks-and-crosses-successfull"
+        >Missions (server) successfully ticks</RouterLink
+      >
     </nav>
   </header>
   <RouterView />
